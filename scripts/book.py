@@ -17,6 +17,10 @@ BOOK_ICON_URL = "https://www.notion.so/icons/book_gray.svg"
 
 rating = {"poor": "⭐️", "fair": "⭐️⭐️⭐️", "good": "⭐️⭐️⭐️⭐️⭐️"}
 
+print("NOTION_TOKEN:", os.getenv("NOTION_TOKEN"))
+print("NOTION_PAGE:", os.getenv("NOTION_PAGE"))
+print("WEREAD_COOKIE:", os.getenv("WEREAD_COOKIE"))
+
 
 @retry(stop_max_attempt_number=3, wait_fixed=5000)
 def get_douban_url(isbn):
